@@ -1,0 +1,32 @@
+{
+  "prettier.enable": true,
+  "eslint.enable": true,
+  "eslint.validate": [
+    "vue",
+    "yaml",
+    "html",
+    "toml",
+    "json",
+    "jsonc",
+    "json5",
+    "markdown",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
+  "cSpell.allowCompoundWords": true,
+  "cSpell.words": [
+    "bumpp",
+    "changelogithub",
+    "gstatic",
+    "iconify",
+    "nocheck",
+    "nuxt",
+    "nuxtjs",
+    "unplugin",
+    "valibot",
+    "vite",
+    "vueuse"
+  ]
+}
