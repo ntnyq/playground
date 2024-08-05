@@ -1,0 +1,15 @@
+diff --git a/package.json b/package.json
+index 8dbc8c0debb38f7031d03aadca1ce6429d51e207..04c163adb6c46401d9898fda582cbf08d4cc14bb 100644
+--- a/package.json
++++ b/package.json
+@@ -12,6 +12,10 @@
+         "import": "./dist/esm/index.js",
+         "require": "./dist/umd/ffmpeg.js"
+       }
++    },
++    "./worker": {
++      "types": "./dist/esm/worker.d.ts",
++      "default": "./dist/esm/worker.js"
+     }
+   },
+   "scripts": {

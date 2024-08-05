@@ -42,6 +42,10 @@ export default defineNuxtConfig({
   vite: {
     server: {
       cors: true,
+      headers: {
+        'Cross-Origin-Embedder-Policy': 'require-corp',
+        'Cross-Origin-Opener-Policy': 'same-origin',
+      },
     },
   },
 
