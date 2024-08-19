@@ -34,7 +34,7 @@
     "@ntnyq/eslint-config": "^2.8.2",
     "@ntnyq/prettier-config": "^1.21.2",
     "@nuxt/devtools": "latest",
-    "@types/node": "^22.4.0",
+    "@types/node": "^22.4.1",
     "@unocss/nuxt": "^0.62.2",
     "@vueuse/nuxt": "^11.0.0",
     "bumpp": "^9.5.1",
