@@ -28,6 +28,9 @@ importers:
       '@iconify-json/logos':
         specifier: ^1.2.0
         version: 1.2.0
+      '@tinymce/tinymce-vue':
+        specifier: ^6.0.1
+        version: 6.0.1(vue@3.5.6(typescript@5.6.2))
       '@unocss/reset':
         specifier: ^0.62.4
         version: 0.62.4
@@ -40,6 +43,9 @@ importers:
       fabric:
         specifier: ^6.4.2
         version: 6.4.2
+      tinymce:
+        specifier: ^7.3.0
+        version: 7.3.0
       valibot:
         specifier: ^0.42.1
         version: 0.42.1(typescript@5.6.2)
@@ -1133,6 +1139,11 @@ packages:
   '@sindresorhus/merge-streams@2.3.0':
     resolution: {integrity: sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==}
     engines: {node: '>=18'}
+
+  '@tinymce/tinymce-vue@6.0.1':
+    resolution: {integrity: sha512-VzjI8AKlNrrsosIk3WuBez6kubqPsPMeaButkRLuts77uo4e2EwPRFX+VyB6fHbMGHwUPK22zNjOUGMvJFZFCw==}
+    peerDependencies:
+      vue: ^3.0.0
 
   '@tootallnate/once@2.0.0':
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
@@ -4231,6 +4242,9 @@ packages:
     resolution: {integrity: sha512-NbBoFBpqfcgd1tCiO8Lkfdk+xrA7mlLR9zgvZcZWQQwU63XAfUePyd6wZBaU93Hqw347lHnwFzttAkemHzzz4g==}
     engines: {node: '>=12.0.0'}
 
+  tinymce@7.3.0:
+    resolution: {integrity: sha512-Ls4PgYlpk73XAxBSBqbVmSl8Mb3DuNfgF01GZ0lY6/MOEVRl3IL+VxC1Oe6165e8WqbqVsxO3Qj/PmoYNvQKGQ==}
+
   to-fast-properties@2.0.0:
     resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
     engines: {node: '>=4'}
@@ -5867,6 +5881,11 @@ snapshots:
     optional: true
 
   '@sindresorhus/merge-streams@2.3.0': {}
+
+  '@tinymce/tinymce-vue@6.0.1(vue@3.5.6(typescript@5.6.2))':
+    dependencies:
+      tinymce: 7.3.0
+      vue: 3.5.6(typescript@5.6.2)
 
   '@tootallnate/once@2.0.0':
     optional: true
@@ -9701,6 +9720,8 @@ snapshots:
     dependencies:
       fdir: 6.3.0(picomatch@4.0.2)
       picomatch: 4.0.2
+
+  tinymce@7.3.0: {}
 
   to-fast-properties@2.0.0: {}
 

@@ -23,10 +23,12 @@
     "@ffmpeg/util": "^0.12.1",
     "@iconify-json/carbon": "^1.2.1",
     "@iconify-json/logos": "^1.2.0",
+    "@tinymce/tinymce-vue": "^6.0.1",
     "@unocss/reset": "^0.62.4",
     "dayjs": "^1.11.13",
     "echarts": "^5.5.1",
     "fabric": "^6.4.2",
+    "tinymce": "^7.3.0",
     "valibot": "^0.42.1",
     "vue-echarts": "^7.0.3"
   },
