@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@9.10.0",
+  "packageManager": "pnpm@9.11.0",
   "description": "__TODO__",
   "keywords": [],
   "scripts": {
@@ -27,7 +27,7 @@
     "dayjs": "^1.11.13",
     "echarts": "^5.5.1",
     "fabric": "^6.4.2",
-    "valibot": "^0.42.0",
+    "valibot": "^0.42.1",
     "vue-echarts": "^7.0.3"
   },
   "devDependencies": {
@@ -39,7 +39,7 @@
     "@vueuse/nuxt": "^11.1.0",
     "bumpp": "^9.5.2",
     "consola": "^3.2.3",
-    "eslint": "^9.10.0",
+    "eslint": "^9.11.0",
     "husky": "^9.1.6",
     "nano-staged": "^0.8.0",
     "npm-run-all2": "^6.2.3",
