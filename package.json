@@ -33,7 +33,7 @@
     "vue-echarts": "^7.0.3"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^3.0.0-beta.14",
+    "@ntnyq/eslint-config": "^3.0.0-beta.17",
     "@ntnyq/prettier-config": "^1.21.3",
     "@nuxt/devtools": "latest",
     "@types/node": "^22.5.5",
