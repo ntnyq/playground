@@ -29,6 +29,7 @@
     "unplugin",
     "valibot",
     "vite",
-    "vueuse"
+    "vueuse",
+    "zrender"
   ]
 }

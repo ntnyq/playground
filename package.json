@@ -30,18 +30,19 @@
     "fabric": "^6.4.2",
     "tinymce": "^7.3.0",
     "valibot": "^0.42.1",
-    "vue-echarts": "^7.0.3"
+    "vue-echarts": "^7.0.3",
+    "zrender": "^5.6.0"
   },
   "devDependencies": {
     "@ntnyq/eslint-config": "^3.0.0-beta.17",
     "@ntnyq/prettier-config": "^1.21.3",
     "@nuxt/devtools": "latest",
-    "@types/node": "^22.5.5",
+    "@types/node": "^22.7.3",
     "@unocss/nuxt": "^0.62.4",
     "@vueuse/nuxt": "^11.1.0",
     "bumpp": "^9.5.2",
     "consola": "^3.2.3",
-    "eslint": "^9.11.0",
+    "eslint": "^9.11.1",
     "husky": "^9.1.6",
     "nano-staged": "^0.8.0",
     "npm-run-all2": "^6.2.3",
