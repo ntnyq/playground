@@ -24,6 +24,8 @@
     "@iconify-json/carbon": "^1.2.3",
     "@iconify-json/logos": "^1.2.3",
     "@tinymce/tinymce-vue": "^6.0.1",
+    "@tiptap/starter-kit": "^2.8.0",
+    "@tiptap/vue-3": "^2.8.0",
     "@unocss/reset": "^0.63.4",
     "dayjs": "^1.11.13",
     "echarts": "^5.5.1",
