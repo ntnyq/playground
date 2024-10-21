@@ -3,6 +3,7 @@
  * @see https://nuxt.com/docs/api/configuration/nuxt-config
  */
 
+import process from 'node:process'
 import { META } from './constants'
 
 export default defineNuxtConfig({
@@ -23,6 +24,9 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: false,
       routes: ['/'],
+    },
+    routeRules: {
+      '/_v/**': { proxy: 'https://v.roe.dev/**' },
     },
   },
 
@@ -46,6 +50,17 @@ export default defineNuxtConfig({
         'Cross-Origin-Embedder-Policy': 'require-corp',
         'Cross-Origin-Opener-Policy': 'same-origin',
       },
+    },
+  },
+
+  runtimeConfig: {
+    url: 'https://playground.ntnyq.com',
+    github: {
+      token: '',
+      // Oauth client
+      // cSpell: disable-next-line
+      clientId: process.env.GITHUB_OAUTH_CLIENT_ID || '',
+      clientSecret: process.env.GITHUB_OAUTH_CLIENT_SECRET || '',
     },
   },
 
