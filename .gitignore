@@ -24,3 +24,6 @@ logs
 
 # Nuxt
 sw.*
+
+# UnoCSS preset web fonts
+public/assets/fonts
