@@ -7,7 +7,7 @@ import process from 'node:process'
 import { META } from './constants'
 
 export default defineNuxtConfig({
-  modules: ['@vueuse/nuxt', '@unocss/nuxt'],
+  modules: ['@vueuse/nuxt', '@unocss/nuxt', 'nuxt-monaco-editor'],
 
   experimental: {
     payloadExtraction: false,
@@ -44,6 +44,16 @@ export default defineNuxtConfig({
   },
 
   vite: {
+    esbuild: {
+      legalComments: 'external',
+    },
+
+    resolve: {
+      alias: {
+        path: 'pathe',
+      },
+    },
+
     server: {
       cors: true,
       headers: {
@@ -81,7 +91,9 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  compatibilityDate: '2024-09-19',
+  compatibilityDate: '2024-10-26',
 
-  future: {},
+  future: {
+    compatibilityVersion: 4,
+  },
 })
