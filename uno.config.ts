@@ -10,8 +10,28 @@ import {
 } from 'unocss'
 
 export default defineConfig({
-  shortcuts: {
-    'flex-center': 'flex items-center justify-center',
+  shortcuts: [
+    {
+      'flex-center': 'flex items-center justify-center',
+
+      'border-base': 'border-gray:20',
+    },
+    [
+      /^btn-simple-(.*)$/,
+      ([, color]) => [
+        `@hover:border-${color}/50 @hover:color-${color} @hover:opacity-100`,
+        `active:bg-${color}/10`,
+        'disabled:opacity-50 disabled:cursor-not-allowed disbled:pointer-events-none',
+        'border border-base border-rounded-lg',
+        'flex gap-1 items-center justify-center',
+      ],
+    ],
+  ],
+
+  theme: {
+    colors: {
+      primary: '#14b8a6',
+    },
   },
 
   presets: [

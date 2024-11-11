@@ -75,7 +75,15 @@ export default defineNuxtConfig({
   },
 
   components: {
-    dirs: ['~/components'],
+    dirs: [
+      {
+        path: '~/components',
+        pathPrefix: false,
+      },
+    ],
+    transform: {
+      include: [/\.vue/, /\.md/],
+    },
   },
 
   imports: {
@@ -85,7 +93,12 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ['@unocss/reset/tailwind.css', '~/styles/vars.css', '~/styles/global.css'],
+  css: [
+    '@unocss/reset/tailwind.css',
+    'floating-vue/dist/style.css',
+    '~/styles/vars.css',
+    '~/styles/global.css',
+  ],
 
   ssr: false,
 
