@@ -14,14 +14,22 @@ export default defineConfig({
     {
       'flex-center': 'flex items-center justify-center',
 
+      'bg-base': 'bg-white dark:bg-black',
+      'bg-hover': 'bg-[#8881]',
+      'color-base': 'text-#222 dark:text-#ddd',
       'border-base': 'border-gray:20',
+
+      'box-input': 'box-input-shell box-input-inner focus:(border-primary ring-2 ring-primary:20)',
+      'box-input-inner': 'px-2 py-1 outline-none w-full bg-base rounded-lg placeholder-gray:50',
+      'box-input-shell':
+        'bg-base border-base color-base border rounded-lg focus-within:(border-primary ring-2 ring-primary:20) disabled:(bg-gray:10 color-gray:50)',
     },
     [
       /^btn-simple-(.*)$/,
       ([, color]) => [
         `@hover:border-${color}/50 @hover:color-${color} @hover:opacity-100`,
         `active:bg-${color}/10`,
-        'disabled:opacity-50 disabled:cursor-not-allowed disbled:pointer-events-none',
+        'disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none',
         'border border-base border-rounded-lg',
         'flex gap-1 items-center justify-center',
       ],
