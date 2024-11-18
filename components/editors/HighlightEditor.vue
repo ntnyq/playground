@@ -77,14 +77,15 @@ watch(
     <div
       @input="updateModelValue"
       v-if="isSupported"
-      v-text="text"
       :key="revision"
       ref="editorRef"
       :class="[inputClass, sharedClass]"
       role="input"
       class="p-2"
       contenteditable="plaintext-only"
-    />
+    >
+      {{ text }}
+    </div>
     <textarea
       v-model="modelValue"
       v-else

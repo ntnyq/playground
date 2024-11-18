@@ -1,5 +1,3 @@
-<script lang="ts" setup></script>
-
 <template>
   <div class="relative h-screen">
     <div class="relative mx-auto max-w-720px p-4">
