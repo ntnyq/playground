@@ -7,12 +7,13 @@ import process from 'node:process'
 import { META } from './constants'
 
 export default defineNuxtConfig({
-  modules: ['@vueuse/nuxt', '@unocss/nuxt', 'nuxt-monaco-editor'],
+  modules: ['@vueuse/nuxt', '@unocss/nuxt', '@nuxt/eslint', 'nuxt-monaco-editor'],
 
   experimental: {
     payloadExtraction: false,
     renderJsonPayloads: true,
     typedPages: true,
+    scanPageMeta: true,
   },
 
   nitro: {
@@ -25,9 +26,7 @@ export default defineNuxtConfig({
       crawlLinks: false,
       routes: ['/'],
     },
-    routeRules: {
-      '/_v/**': { proxy: 'https://v.roe.dev/**' },
-    },
+    routeRules: {},
   },
 
   app: {
@@ -40,6 +39,12 @@ export default defineNuxtConfig({
         { name: 'description', content: META.appDescription },
         { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
       ],
+    },
+  },
+
+  eslint: {
+    config: {
+      standalone: false,
     },
   },
 

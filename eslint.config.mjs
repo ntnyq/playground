@@ -1,3 +1,8 @@
-import { defineESLintConfig } from '@ntnyq/eslint-config'
+// @ts-check
 
-export default defineESLintConfig()
+import { defineESLintConfig } from '@ntnyq/eslint-config'
+import nuxt from './.nuxt/eslint.config.mjs'
+
+const configs = await defineESLintConfig()
+
+export default nuxt(configs)
