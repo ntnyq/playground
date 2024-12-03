@@ -3,7 +3,7 @@
  */
 
 export const META = Object.freeze({
-  appName: 'Playground',
-
   appDescription: 'Playground',
+
+  appName: 'Playground',
 })

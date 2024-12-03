@@ -39,6 +39,7 @@ async function transcode() {
   message.value = 'Complete Transcode'
 
   const data = await ffmpeg.readFile('test.mp4')
+  // @ts-ignore Resizable/Transfer ArrayBuffer microsoft/TypeScript#58573
   const url = URL.createObjectURL(new Blob([(data as Uint8Array).buffer], { type: 'video/mp4' }))
 
   videoSrc.value = url
