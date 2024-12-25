@@ -7,20 +7,26 @@ import process from 'node:process'
 import { META } from './constants'
 
 export default defineNuxtConfig({
+  compatibilityDate: '2024-12-26',
+
+  devtools: { enabled: true },
+
+  modules: ['@vueuse/nuxt', '@unocss/nuxt', '@nuxt/eslint', 'nuxt-monaco-editor'],
+
+  ssr: false,
+
   app: {
     head: {
       link: [{ href: '/icon_48.png', rel: 'icon', type: 'image/png' }],
+      title: META.appName,
+      viewport: 'width=device-width,initial-scale=1',
       meta: [
         { content: 'width=device-width, initial-scale=1', name: 'viewport' },
         { content: META.appDescription, name: 'description' },
         { content: 'black-translucent', name: 'apple-mobile-web-app-status-bar-style' },
       ],
-      title: META.appName,
-      viewport: 'width=device-width,initial-scale=1',
     },
   },
-
-  compatibilityDate: '2024-10-26',
 
   components: {
     dirs: [
@@ -41,8 +47,6 @@ export default defineNuxtConfig({
     '~/styles/global.css',
   ],
 
-  devtools: { enabled: true },
-
   eslint: {
     config: {
       standalone: false,
@@ -61,15 +65,14 @@ export default defineNuxtConfig({
   },
 
   imports: {
+    dirs: ['./composables', './utils'],
     addons: {
       vueTemplate: true,
     },
-    dirs: ['./composables', './utils'],
   },
 
-  modules: ['@vueuse/nuxt', '@unocss/nuxt', '@nuxt/eslint', 'nuxt-monaco-editor'],
-
   nitro: {
+    routeRules: {},
     esbuild: {
       options: {
         target: 'esnext',
@@ -79,10 +82,10 @@ export default defineNuxtConfig({
       crawlLinks: false,
       routes: ['/'],
     },
-    routeRules: {},
   },
 
   runtimeConfig: {
+    url: 'https://playground.ntnyq.com',
     github: {
       // Oauth client
       // cSpell: disable-next-line
@@ -90,10 +93,7 @@ export default defineNuxtConfig({
       clientSecret: process.env.GITHUB_OAUTH_CLIENT_SECRET || '',
       token: '',
     },
-    url: 'https://playground.ntnyq.com',
   },
-
-  ssr: false,
 
   vite: {
     esbuild: {

@@ -1,0 +1,17 @@
+diff --git a/package.json b/package.json
+index 39e60e04ceb0a2dfb179a7b51a9fb3e5ef1dbf56..6a2d3cdb867891ed3c6c7cd30fc4d2172da52a41 100644
+--- a/package.json
++++ b/package.json
+@@ -12,7 +12,11 @@
+         "import": "./dist/esm/index.js",
+         "require": "./dist/umd/ffmpeg.js"
+       }
+-    }
++    },
++    "./worker": {
++        "types": "./dist/esm/worker.d.ts",
++        "default": "./dist/esm/worker.js"
++      }
+   },
+   "scripts": {
+     "dev": "webpack -w --mode development",
