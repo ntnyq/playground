@@ -1,6 +1,7 @@
 import { createPlainShiki } from 'plain-shiki'
 import { createHighlighterCore } from 'shiki/core'
 import { createJavaScriptRegexEngine } from 'shiki/engine/javascript'
+import grammerCSS from 'shiki/langs/css.mjs'
 import grammerJavaScript from 'shiki/langs/javascript.mjs'
 import grammerTypeScript from 'shiki/langs/typescript.mjs'
 import githubDark from 'shiki/themes/github-dark.mjs'
@@ -9,7 +10,7 @@ import type { CreatePlainShikiReturns, MountPlainShikiOptions } from 'plain-shik
 import type { HighlighterCore } from 'shiki/core'
 
 export type UsePlainShikiOptions = Omit<MountPlainShikiOptions, 'lang'> & {
-  lang: 'javascript' | 'typescript'
+  lang: 'javascript' | 'typescript' | 'css'
   enabled?: boolean
   immediate?: boolean
 }
@@ -38,7 +39,7 @@ export function usePlainShiki(
 
   tryOnMounted(async () => {
     shikiPromise ||= createHighlighterCore({
-      langs: [grammerJavaScript, grammerTypeScript],
+      langs: [grammerJavaScript, grammerTypeScript, grammerCSS],
       themes: [githubLight, githubDark],
       engine: createJavaScriptRegexEngine(),
     })

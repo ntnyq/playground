@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  lang?: 'javascript' | 'typescript'
+  lang?: 'javascript' | 'typescript' | 'css'
   inputClass?: string
 }>()
 

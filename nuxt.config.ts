@@ -6,6 +6,11 @@
 import process from 'node:process'
 import { META } from './constants'
 
+const sharedHeaders = {
+  'Cross-Origin-Embedder-Policy': 'require-corp',
+  'Cross-Origin-Opener-Policy': 'same-origin',
+}
+
 export default defineNuxtConfig({
   compatibilityDate: '2024-12-26',
 
@@ -54,6 +59,7 @@ export default defineNuxtConfig({
   },
 
   experimental: {
+    appManifest: true,
     payloadExtraction: false,
     renderJsonPayloads: true,
     scanPageMeta: true,
@@ -70,7 +76,6 @@ export default defineNuxtConfig({
       vueTemplate: true,
     },
   },
-
   nitro: {
     routeRules: {},
     esbuild: {
@@ -81,6 +86,12 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: false,
       routes: ['/'],
+    },
+  },
+
+  routeRules: {
+    '/**': {
+      headers: sharedHeaders,
     },
   },
 
@@ -100,6 +111,10 @@ export default defineNuxtConfig({
       legalComments: 'external',
     },
 
+    optimizeDeps: {
+      exclude: ['@ffmpeg/ffmpeg', '@ffmpeg/util'],
+    },
+
     resolve: {
       alias: {
         path: 'pathe',
@@ -108,10 +123,7 @@ export default defineNuxtConfig({
 
     server: {
       cors: true,
-      headers: {
-        'Cross-Origin-Embedder-Policy': 'require-corp',
-        'Cross-Origin-Opener-Policy': 'same-origin',
-      },
+      headers: sharedHeaders,
     },
   },
 })
