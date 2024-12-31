@@ -21,6 +21,7 @@
     "@ffmpeg/ffmpeg": "^0.12.13",
     "@ffmpeg/types": "^0.12.3",
     "@ffmpeg/util": "^0.12.1",
+    "@huggingface/transformers": "^3.2.4",
     "@tinymce/tinymce-vue": "^6.1.0",
     "@tiptap/starter-kit": "^2.11.0",
     "@tiptap/vue-3": "^2.11.0",

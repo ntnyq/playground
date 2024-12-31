@@ -77,15 +77,10 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
-    routeRules: {},
     esbuild: {
       options: {
         target: 'esnext',
       },
-    },
-    prerender: {
-      crawlLinks: false,
-      routes: ['/'],
     },
   },
 
@@ -98,7 +93,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     url: 'https://playground.ntnyq.com',
     github: {
-      // Oauth client
+      // OAuth client
       // cSpell: disable-next-line
       clientId: process.env.GITHUB_OAUTH_CLIENT_ID || '',
       clientSecret: process.env.GITHUB_OAUTH_CLIENT_SECRET || '',
