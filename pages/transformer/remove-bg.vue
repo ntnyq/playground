@@ -9,7 +9,7 @@ const BG_GRID = `url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMA
 env.allowLocalModels = false
 
 if (env.backends.onnx.wasm) {
-  env.backends.onnx.wasm.proxy = true
+  env.backends.onnx.wasm.wasmPaths = '/wasm/ort/'
 }
 
 const {
