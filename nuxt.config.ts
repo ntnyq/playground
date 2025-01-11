@@ -12,7 +12,7 @@ const sharedHeaders = {
 }
 
 export default defineNuxtConfig({
-  compatibilityDate: '2024-12-26',
+  compatibilityDate: '2025-01-10',
 
   devtools: { enabled: true },
 

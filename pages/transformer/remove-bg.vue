@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { AutoModel, AutoProcessor, env, RawImage } from '@huggingface/transformers'
+import { createLogger } from '~/utils/logger'
 import type { CSSProperties } from 'vue'
 
 const logger = createLogger('transformer:remove-bg')
@@ -129,7 +130,7 @@ async function predict() {
   const pixelData = ctx.getImageData(0, 0, image.width, image.height)
 
   for (let i = 0; i < mask.data.length; ++i) {
-    // @ts-expect-error
+    // @ts-expect-error type
     pixelData.data[4 * i + 3] = mask.data[i]
   }
   ctx.putImageData(pixelData, 0, 0)

@@ -40,12 +40,10 @@ export default defineConfig({
   shortcuts: [
     {
       'bg-base': 'bg-white dark:bg-black',
-
       'bg-hover': 'bg-[#8881]',
       'border-base': 'border-gray:20',
       'box-input': 'box-input-shell box-input-inner focus:(border-primary ring-2 ring-primary:20)',
       'box-input-inner': 'px-2 py-1 outline-none w-full bg-base rounded-lg placeholder-gray:50',
-
       'color-base': 'text-#222 dark:text-#ddd',
       'flex-center': 'flex items-center justify-center',
       'box-input-shell':
