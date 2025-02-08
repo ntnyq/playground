@@ -7,9 +7,15 @@ export default defineConfig({
 
   overrides: [
     {
-      files: ['**/*.css'],
+      files: ['**/*.css', '**/*.scss'],
       options: {
         singleQuote: false,
+      },
+    },
+    {
+      files: ['**/*.html'],
+      options: {
+        singleAttributePerLine: false,
       },
     },
   ],

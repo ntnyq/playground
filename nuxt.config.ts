@@ -12,7 +12,7 @@ const sharedHeaders = {
 }
 
 export default defineNuxtConfig({
-  compatibilityDate: '2025-01-10',
+  compatibilityDate: '2025-02-08',
 
   devtools: { enabled: true },
 
@@ -24,7 +24,10 @@ export default defineNuxtConfig({
     head: {
       link: [{ href: '/icon_48.png', rel: 'icon', type: 'image/png' }],
       title: META.appName,
-      viewport: 'width=device-width,initial-scale=1',
+      viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
+      htmlAttrs: {
+        lang: 'en',
+      },
       meta: [
         { content: 'width=device-width, initial-scale=1', name: 'viewport' },
         { content: META.appDescription, name: 'description' },
@@ -59,7 +62,7 @@ export default defineNuxtConfig({
   },
 
   experimental: {
-    appManifest: true,
+    appManifest: false,
     payloadExtraction: false,
     renderJsonPayloads: true,
     scanPageMeta: true,
@@ -76,17 +79,28 @@ export default defineNuxtConfig({
       vueTemplate: true,
     },
   },
+
   nitro: {
+    preset: 'static',
     esbuild: {
       options: {
         target: 'esnext',
       },
     },
-  },
-
-  routeRules: {
-    '/**': {
-      headers: sharedHeaders,
+    routeRules: {
+      '/': {
+        prerender: true,
+      },
+      '/**': {
+        headers: sharedHeaders,
+        prerender: false,
+      },
+      '/200.html': {
+        prerender: true,
+      },
+      '/404.html': {
+        prerender: true,
+      },
     },
   },
 

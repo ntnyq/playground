@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { createP5, type P5I } from 'p5i'
+import { createP5 } from 'p5i'
+import type { P5I } from 'p5i'
 
 const {
   mount,

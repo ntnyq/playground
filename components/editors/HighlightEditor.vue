@@ -4,7 +4,7 @@ const props = defineProps<{
   inputClass?: string
 }>()
 
-const modelValue = defineModel<string>('modelValue')
+const modelValue = defineModel<string>()
 
 function getSupported() {
   try {
@@ -38,8 +38,9 @@ const { trigger: triggerHighlight } = usePlainShiki(editorRef, {
   },
 })
 
-const { stop } = useIntersectionObserver(containerRef, entries => {
+const { stop } = useIntersectionObserver(containerRef, async entries => {
   if (entries[0]?.isIntersecting) {
+    await nextTick()
     triggerHighlight()
     stop()
   }
@@ -58,6 +59,7 @@ watch(
     if (updatePaused.value) {
       return
     }
+
     text.value = modelValue.value || ''
     revision.value += 1
   },
