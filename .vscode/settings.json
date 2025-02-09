@@ -30,6 +30,7 @@
     "estree",
     "gstatic",
     "iconify",
+    "jszip",
     "nocheck",
     "nuxi",
     "nuxt",

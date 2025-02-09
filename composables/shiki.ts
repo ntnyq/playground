@@ -1,5 +1,8 @@
 import { createHighlighterCore } from '@shikijs/core'
 import { createJavaScriptRegexEngine } from '@shikijs/engine-javascript'
+import langCSS from '@shikijs/langs/css'
+import langJavaScript from '@shikijs/langs/javascript'
+import langTypeScript from '@shikijs/langs/typescript'
 import githubDark from '@shikijs/themes/github-dark'
 import githubLight from '@shikijs/themes/github-light'
 import { createPlainShiki } from 'plain-shiki'
@@ -39,11 +42,7 @@ export function usePlainShiki(
 
   tryOnMounted(async () => {
     shikiPromise ||= createHighlighterCore({
-      langs: [
-        import('@shikijs/langs-precompiled/css'),
-        import('@shikijs/langs-precompiled/javascript'),
-        import('@shikijs/langs-precompiled/typescript'),
-      ],
+      langs: [langJavaScript, langTypeScript, langCSS],
       themes: [githubLight, githubDark],
       engine: createJavaScriptRegexEngine(),
     })

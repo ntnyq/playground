@@ -4,6 +4,8 @@
  */
 
 import process from 'node:process'
+import topLevelAwait from 'vite-plugin-top-level-await'
+import wasm from 'vite-plugin-wasm'
 import { META } from './constants'
 
 const sharedHeaders = {
@@ -132,9 +134,16 @@ export default defineNuxtConfig({
       exclude: ['@ffmpeg/ffmpeg', '@ffmpeg/util'],
     },
 
+    plugins: [
+      // https://github.com/Menci/vite-plugin-wasm
+      wasm(),
+      topLevelAwait(),
+    ],
+
     resolve: {
       alias: {
         path: 'pathe',
+        util: 'util',
       },
     },
 

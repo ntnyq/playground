@@ -1,20 +1,63 @@
 <script lang="ts" setup>
-import tsBlankSpace from 'ts-blank-space'
+import { interopDefault } from '@ntnyq/utils'
 import typescriptSample from '@/constants/samples/typescript.sample?raw'
 import { formatViaPrettier } from '~/utils/libs/prettier'
+
+type Transformer = 'ts-blank-space' | 'oxidase' | '@swc/wasm-typescript'
+
+const isError = ref(false)
+const transformer = useLocalStorage<Transformer>(
+  'transformer',
+  'ts-blank-space',
+)
 
 const typescriptCode = ref(typescriptSample)
 const javascriptCode = ref('')
 
 async function removeTypes() {
-  const result = tsBlankSpace(typescriptCode.value, err => {
-    console.log(err)
-  })
+  let result = ''
+
+  if (transformer.value === 'oxidase') {
+    try {
+      const { transpile } = await interopDefault(import('oxidase'))
+
+      result = transpile(typescriptCode.value)
+      isError.value = false
+    } catch (err) {
+      console.log(err)
+      isError.value = true
+    }
+  } else if (transformer.value === 'ts-blank-space') {
+    try {
+      const tsBlankSpace = await interopDefault(import('ts-blank-space'))
+
+      result = tsBlankSpace(typescriptCode.value, err => {
+        console.log(err)
+        isError.value = true
+      })
+      isError.value = false
+    } catch (err) {
+      console.log(err)
+      isError.value = true
+    }
+  } else if (transformer.value === '@swc/wasm-typescript') {
+    try {
+      const { transform } = await interopDefault(import('@swc/wasm-typescript'))
+      const { code } = await transform(typescriptCode.value, {
+        mode: 'strip-only',
+      })
+      result = code
+      isError.value = false
+    } catch (err) {
+      console.log(err)
+      isError.value = true
+    }
+  }
   javascriptCode.value = await formatViaPrettier(result)
 }
 
 watch(
-  typescriptCode,
+  [typescriptCode, transformer],
   () => {
     removeTypes()
   },
@@ -62,6 +105,26 @@ watch(
           />
         </div>
       </div>
+    </div>
+
+    <div
+      class="fixed left-1/2 top-4 z-1000 flex items-center gap-4 -translate-x-1/2"
+    >
+      <label
+        class="font-medium op-65"
+        for="transformer"
+      >
+        Transformer
+      </label>
+      <select
+        v-model="transformer"
+        id="transformer"
+        class="border border-zinc-200 px-2 py-1"
+      >
+        <option value="ts-blank-space">ts-blank-space</option>
+        <option value="oxidase">oxidase</option>
+        <!-- <option value="@swc/wasm-typescript">@swc/wasm-typescript</option> -->
+      </select>
     </div>
   </div>
 </template>
