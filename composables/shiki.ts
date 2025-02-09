@@ -4,7 +4,10 @@ import githubDark from '@shikijs/themes/github-dark'
 import githubLight from '@shikijs/themes/github-light'
 import { createPlainShiki } from 'plain-shiki'
 import type { HighlighterCore } from '@shikijs/core'
-import type { CreatePlainShikiReturns, MountPlainShikiOptions } from 'plain-shiki'
+import type {
+  CreatePlainShikiReturns,
+  MountPlainShikiOptions,
+} from 'plain-shiki'
 
 export type UsePlainShikiOptions = Omit<MountPlainShikiOptions, 'lang'> & {
   lang: 'javascript' | 'typescript' | 'css'

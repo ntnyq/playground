@@ -1,5 +1,10 @@
 <script lang="ts" setup>
-import { AutoModel, AutoProcessor, env, RawImage } from '@huggingface/transformers'
+import {
+  AutoModel,
+  AutoProcessor,
+  env,
+  RawImage,
+} from '@huggingface/transformers'
 import { createLogger } from '~/utils/logger'
 import type { CSSProperties } from 'vue'
 
@@ -167,7 +172,8 @@ async function handleClick() {
       ref="dropZoneRef"
       :class="{
         'bg-green-100 dark:bg-green-600': isOverDropZone,
-        'bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-900 dark:hover:bg-zinc-700': !isOverDropZone,
+        'bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-900 dark:hover:bg-zinc-700':
+          !isOverDropZone,
       }"
       class="h-[180px] w-[400px] cursor-pointer rounded-md transition-colors duration-200 ease-in-out"
       role="button"

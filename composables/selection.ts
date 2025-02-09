@@ -69,10 +69,10 @@ export function useElementSelection(
       const targetRect = target.getBoundingClientRect()
 
       if (
-        targetRect.top > top.value &&
-        targetRect.bottom < bottom.value &&
-        targetRect.left > left.value &&
-        targetRect.right < right.value
+        targetRect.top > top.value
+        && targetRect.bottom < bottom.value
+        && targetRect.left > left.value
+        && targetRect.right < right.value
       ) {
         options.onSelect?.(target)
       }
@@ -80,7 +80,9 @@ export function useElementSelection(
   }
 
   function updateRect() {
-    if (!startPosition.value || !stopPosition.value || !isSelecting.value) return
+    if (!startPosition.value || !stopPosition.value || !isSelecting.value) {
+      return
+    }
 
     const overlay = ensureOverlay()
 

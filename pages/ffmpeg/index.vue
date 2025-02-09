@@ -4,7 +4,8 @@ import workerUrl from '@ffmpeg/ffmpeg/worker?worker&url'
 import { fetchFile, toBlobURL } from '@ffmpeg/util'
 
 const baseURL = 'https://unpkg.com/@ffmpeg/core-mt@0.12.6/dist/esm'
-const videoURL = 'https://raw.githubusercontent.com/ffmpegwasm/testdata/master/video-15s.avi'
+const videoURL =
+  'https://raw.githubusercontent.com/ffmpegwasm/testdata/master/video-15s.avi'
 
 const ffmpeg = new FFmpeg()
 
@@ -21,7 +22,10 @@ async function loadFFmpeg() {
   await ffmpeg.load({
     coreURL: await toBlobURL(`${baseURL}/ffmpeg-core.js`, 'text/javascript'),
     wasmURL: await toBlobURL(`${baseURL}/ffmpeg-core.wasm`, 'application/wasm'),
-    workerURL: await toBlobURL(`${baseURL}/ffmpeg-core.worker.js`, 'text/javascript'),
+    workerURL: await toBlobURL(
+      `${baseURL}/ffmpeg-core.worker.js`,
+      'text/javascript',
+    ),
     classWorkerURL: new URL(workerUrl, import.meta.url).toString(),
   })
 }

@@ -24,11 +24,17 @@ export async function syncWasm(options: SyncOptions) {
     })
     await Promise.all(
       files.map(v =>
-        copyFile(`node_modules/${options.cwd}/${v}`, resolve(`public/wasm/${options.to}/${v}`)),
+        copyFile(
+          `node_modules/${options.cwd}/${v}`,
+          resolve(`public/wasm/${options.to}/${v}`),
+        ),
       ),
     )
   } else {
-    await copyFile(resolve(`node_modules/${options.from}`), resolve(`public/wasm/${options.to}`))
+    await copyFile(
+      resolve(`node_modules/${options.from}`),
+      resolve(`public/wasm/${options.to}`),
+    )
   }
 }
 

@@ -7,7 +7,10 @@ export interface Options extends Partial<TransformOptions<{}>> {}
 
 let lightningcss: Promise<typeof import('lightningcss-wasm')>
 
-export async function transformViaLightningCSS(code: string, options: Options = {}) {
+export async function transformViaLightningCSS(
+  code: string,
+  options: Options = {},
+) {
   if (!lightningcss) {
     lightningcss = import('lightningcss-wasm').then(async r => {
       await r.default('/wasm/lightningcss_node.wasm')

@@ -16,8 +16,6 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  modules: ['@vueuse/nuxt', '@unocss/nuxt', '@nuxt/eslint', 'nuxt-monaco-editor'],
-
   ssr: false,
 
   app: {
@@ -31,7 +29,10 @@ export default defineNuxtConfig({
       meta: [
         { content: 'width=device-width, initial-scale=1', name: 'viewport' },
         { content: META.appDescription, name: 'description' },
-        { content: 'black-translucent', name: 'apple-mobile-web-app-status-bar-style' },
+        {
+          content: 'black-translucent',
+          name: 'apple-mobile-web-app-status-bar-style',
+        },
       ],
     },
   },
@@ -79,6 +80,13 @@ export default defineNuxtConfig({
       vueTemplate: true,
     },
   },
+
+  modules: [
+    '@vueuse/nuxt',
+    '@unocss/nuxt',
+    '@nuxt/eslint',
+    'nuxt-monaco-editor',
+  ],
 
   nitro: {
     preset: 'static',

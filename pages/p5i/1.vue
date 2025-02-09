@@ -39,7 +39,11 @@ function randomColor() {
 
 function addPoints() {
   for (let x = -SPACING / 2; x < width.value + SPACING; x += SPACING) {
-    for (let y = -SPACING / 2; y < height.value + offsetY + SPACING; y += SPACING) {
+    for (
+      let y = -SPACING / 2;
+      y < height.value + offsetY + SPACING;
+      y += SPACING
+    ) {
       const id = `${x}-${y}`
       if (existingPoints.has(id)) {
         continue
