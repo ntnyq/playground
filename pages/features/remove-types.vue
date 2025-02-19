@@ -3,7 +3,7 @@ import { interopDefault } from '@ntnyq/utils'
 import typescriptSample from '@/constants/samples/typescript.sample?raw'
 import { formatViaPrettier } from '~/utils/libs/prettier'
 
-type Transformer = 'ts-blank-space' | 'oxidase' | '@swc/wasm-typescript'
+type Transformer = 'ts-blank-space' | 'oxidase'
 
 const isError = ref(false)
 const transformer = useLocalStorage<Transformer>(
@@ -35,18 +35,6 @@ async function removeTypes() {
         console.log(err)
         isError.value = true
       })
-      isError.value = false
-    } catch (err) {
-      console.log(err)
-      isError.value = true
-    }
-  } else if (transformer.value === '@swc/wasm-typescript') {
-    try {
-      const { transform } = await interopDefault(import('@swc/wasm-typescript'))
-      const { code } = await transform(typescriptCode.value, {
-        mode: 'strip-only',
-      })
-      result = code
       isError.value = false
     } catch (err) {
       console.log(err)
