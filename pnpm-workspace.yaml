@@ -3,10 +3,10 @@ catalog:
   '@ffmpeg/types': ^0.12.4
   '@ffmpeg/util': ^0.12.2
   '@huggingface/transformers': ^3.3.3
-  '@shikijs/core': ^2.4.2
-  '@shikijs/engine-javascript': ^2.4.2
-  '@shikijs/langs': ^2.4.2
-  '@shikijs/themes': ^2.4.2
+  '@shikijs/core': ^3.0.0
+  '@shikijs/engine-javascript': ^3.0.0
+  '@shikijs/langs': ^3.0.0
+  '@shikijs/themes': ^3.0.0
   '@tinymce/tinymce-vue': ^6.1.0
   '@tiptap/starter-kit': ^2.11.5
   '@tiptap/vue-3': ^2.11.5
@@ -23,7 +23,7 @@ catalog:
   oxidase: ^0.0.3
   p5i: ^0.6.0
   plain-shiki: ^0.1.1
-  shiki: ^2.4.2
+  shiki: ^3.0.0
   simplex-noise: ^4.0.3
   tinymce: ^7.6.1
   ts-blank-space: ^0.6.0
