@@ -30,9 +30,6 @@ catalogs:
     '@shikijs/themes':
       specifier: ^3.0.0
       version: 3.0.0
-    '@tinymce/tinymce-vue':
-      specifier: ^6.1.0
-      version: 6.1.0
     '@tiptap/starter-kit':
       specifier: ^2.11.5
       version: 2.11.5
@@ -81,21 +78,12 @@ catalogs:
     simplex-noise:
       specifier: ^4.0.3
       version: 4.0.3
-    tinymce:
-      specifier: ^7.7.0
-      version: 7.7.0
     ts-blank-space:
       specifier: ^0.6.0
       version: 0.6.0
     ufo:
       specifier: ^1.5.4
       version: 1.5.4
-    uncrypto:
-      specifier: ^0.1.3
-      version: 0.1.3
-    valibot:
-      specifier: ^1.0.0-rc.2
-      version: 1.0.0-rc.2
     zrender:
       specifier: ^5.6.1
       version: 5.6.1
@@ -131,9 +119,6 @@ importers:
       '@shikijs/themes':
         specifier: 'catalog:'
         version: 3.0.0
-      '@tinymce/tinymce-vue':
-        specifier: 'catalog:'
-        version: 6.1.0(tinymce@7.7.0)(vue@3.5.13(typescript@5.7.3))
       '@tiptap/starter-kit':
         specifier: 'catalog:'
         version: 2.11.5
@@ -185,21 +170,12 @@ importers:
       simplex-noise:
         specifier: 'catalog:'
         version: 4.0.3
-      tinymce:
-        specifier: 'catalog:'
-        version: 7.7.0
       ts-blank-space:
         specifier: 'catalog:'
         version: 0.6.0
       ufo:
         specifier: 'catalog:'
         version: 1.5.4
-      uncrypto:
-        specifier: 'catalog:'
-        version: 0.1.3
-      valibot:
-        specifier: 'catalog:'
-        version: 1.0.0-rc.2(typescript@5.7.3)
       zrender:
         specifier: 'catalog:'
         version: 5.6.1
@@ -1690,15 +1666,6 @@ packages:
 
   '@swc/types@0.1.17':
     resolution: {integrity: sha512-V5gRru+aD8YVyCOMAjMpWR1Ui577DD5KSJsHP8RAxopAH22jFz6GZd/qxqjO6MJHQhcsjvjOFXyDhyLQUnMveQ==}
-
-  '@tinymce/tinymce-vue@6.1.0':
-    resolution: {integrity: sha512-7JdaKMOaohuFWpjKwRmaZJbT/eNVUUYHG93R7+lUf7SUN+hSqd2spbuqZcki+tG9kaSAGd2ZmvJIsmzWDNAzpw==}
-    peerDependencies:
-      tinymce: ^7.0.0 || ^6.0.0 || ^5.5.1
-      vue: ^3.0.0
-    peerDependenciesMeta:
-      tinymce:
-        optional: true
 
   '@tiptap/core@2.11.5':
     resolution: {integrity: sha512-jb0KTdUJaJY53JaN7ooY3XAxHQNoMYti/H6ANo707PsLXVeEqJ9o8+eBup1JU5CuwzrgnDc2dECt2WIGX9f8Jw==}
@@ -5316,9 +5283,6 @@ packages:
     resolution: {integrity: sha512-qkf4trmKSIiMTs/E63cxH+ojC2unam7rJ0WrauAzpT3ECNTxGRMlaXxVbfxMUC/w0LaYk6jQ4y/nGR9uBO3tww==}
     engines: {node: '>=12.0.0'}
 
-  tinymce@7.7.0:
-    resolution: {integrity: sha512-zDFPXeje5fQIxuYzv9fE6YmjFBQmeB9SU+85ofizIHqCCkbBnDdEWhD5R8rBu9MwdjIQP3aNohgGe9D6JOhNaw==}
-
   tippy.js@6.3.7:
     resolution: {integrity: sha512-E1d3oP2emgJ9dRQZdf3Kkn0qJgI6ZLpyS5z6ZkY1DF3kaQaBsGZsndEpHwx+eC+tYM41HaSNvNtLx8tU57FzTQ==}
 
@@ -5588,14 +5552,6 @@ packages:
   uuid@10.0.0:
     resolution: {integrity: sha512-8XkAphELsDnEGrDxUOHB3RGvXz6TeuYSGEZBOjtTtPm2lwhGBjLgOzLHB63IUWfBpNucQjND6d3AOudO+H3RWQ==}
     hasBin: true
-
-  valibot@1.0.0-rc.2:
-    resolution: {integrity: sha512-Tnnp7dydpihvoUbJiaxuYfsCAgAFKuFMex7PTaI25XSjRWkU70DmJPlAO1W6sF1/WUx4RNWyM2hdmBSMIUSZFA==}
-    peerDependencies:
-      typescript: '>=5'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
 
   validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
@@ -7522,12 +7478,6 @@ snapshots:
   '@swc/types@0.1.17':
     dependencies:
       '@swc/counter': 0.1.3
-
-  '@tinymce/tinymce-vue@6.1.0(tinymce@7.7.0)(vue@3.5.13(typescript@5.7.3))':
-    dependencies:
-      vue: 3.5.13(typescript@5.7.3)
-    optionalDependencies:
-      tinymce: 7.7.0
 
   '@tiptap/core@2.11.5(@tiptap/pm@2.11.5)':
     dependencies:
@@ -12050,8 +12000,6 @@ snapshots:
       fdir: 6.4.3(picomatch@4.0.2)
       picomatch: 4.0.2
 
-  tinymce@7.7.0: {}
-
   tippy.js@6.3.7:
     dependencies:
       '@popperjs/core': 2.11.8
@@ -12367,10 +12315,6 @@ snapshots:
   util-deprecate@1.0.2: {}
 
   uuid@10.0.0: {}
-
-  valibot@1.0.0-rc.2(typescript@5.7.3):
-    optionalDependencies:
-      typescript: 5.7.3
 
   validate-npm-package-license@3.0.4:
     dependencies:

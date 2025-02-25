@@ -28,7 +28,6 @@
     "@shikijs/engine-javascript": "catalog:",
     "@shikijs/langs": "catalog:",
     "@shikijs/themes": "catalog:",
-    "@tinymce/tinymce-vue": "catalog:",
     "@tiptap/starter-kit": "catalog:",
     "@tiptap/vue-3": "catalog:",
     "@unocss/reset": "catalog:",
@@ -46,11 +45,8 @@
     "p5i": "catalog:",
     "plain-shiki": "catalog:",
     "simplex-noise": "catalog:",
-    "tinymce": "catalog:",
     "ts-blank-space": "catalog:",
     "ufo": "catalog:",
-    "uncrypto": "catalog:",
-    "valibot": "catalog:",
     "zrender": "catalog:"
   },
   "devDependencies": {
