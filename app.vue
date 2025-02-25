@@ -2,7 +2,7 @@
   <Suspense>
     <main class="relative flex flex-col lg:h-screen">
       <NuxtPage />
-      <DarkToggle class="absolute right-2 top-2 z-99999" />
+      <DarkToggle class="absolute right-4 top-4 z-99999" />
     </main>
 
     <template #fallback>
