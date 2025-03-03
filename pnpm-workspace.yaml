@@ -3,10 +3,10 @@ catalog:
   '@ffmpeg/types': ^0.12.4
   '@ffmpeg/util': ^0.12.2
   '@huggingface/transformers': ^3.3.3
-  '@shikijs/core': ^3.0.0
-  '@shikijs/engine-javascript': ^3.0.0
-  '@shikijs/langs': ^3.0.0
-  '@shikijs/themes': ^3.0.0
+  '@shikijs/core': ^3.1.0
+  '@shikijs/engine-javascript': ^3.1.0
+  '@shikijs/langs': ^3.1.0
+  '@shikijs/themes': ^3.1.0
   '@tiptap/starter-kit': ^2.11.5
   '@tiptap/vue-3': ^2.11.5
   '@unocss/reset': ^66.0.0
