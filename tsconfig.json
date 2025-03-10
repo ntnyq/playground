@@ -1,14 +1,14 @@
 {
   // https://nuxt.com/docs/guide/concepts/typescript
   "extends": "./.nuxt/tsconfig.json",
-  "typeAcquisition": {
-    "exclude": ["**/public/**"]
-  },
   "exclude": [
     "**/.git/**",
     "**/dist/**",
     "**/public/**",
     "**/output/**",
     "**/node_modules/**"
-  ]
+  ],
+  "typeAcquisition": {
+    "exclude": ["**/public/**"]
+  }
 }

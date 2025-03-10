@@ -4,27 +4,30 @@ import pluginTypeScript from 'prettier/plugins/typescript'
 import { format } from 'prettier/standalone'
 import type { Options } from 'prettier'
 
+// @keep-sorted
 const DEFAULT_OPTIONS: Options = {
-  printWidth: 80,
-  tabWidth: 2,
-  useTabs: false,
-  semi: true,
-  singleQuote: false,
-  bracketSpacing: true,
-  bracketSameLine: false,
-  jsxSingleQuote: false,
-  singleAttributePerLine: false,
-  vueIndentScriptAndStyle: false,
-  quoteProps: 'as-needed',
-  trailingComma: 'all',
   arrowParens: 'always',
-  proseWrap: 'preserve',
-  htmlWhitespaceSensitivity: 'css',
-  endOfLine: 'auto',
+  bracketSameLine: false,
+  bracketSpacing: true,
   embeddedLanguageFormatting: 'auto',
+  endOfLine: 'auto',
+  experimentalOperatorPosition: 'start',
   experimentalTernaries: false,
-  plugins: [pluginEstree, pluginTypeScript, pluginPostCSS],
+  htmlWhitespaceSensitivity: 'css',
+  jsxSingleQuote: false,
+  objectWrap: 'preserve',
   parser: 'typescript',
+  plugins: [pluginEstree, pluginTypeScript, pluginPostCSS],
+  printWidth: 80,
+  proseWrap: 'preserve',
+  quoteProps: 'as-needed',
+  semi: true,
+  singleAttributePerLine: false,
+  singleQuote: false,
+  tabWidth: 2,
+  trailingComma: 'all',
+  useTabs: false,
+  vueIndentScriptAndStyle: false,
 }
 
 export async function formatViaPrettier(source: string, options: Options = {}) {
