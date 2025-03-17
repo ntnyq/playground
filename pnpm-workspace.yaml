@@ -5,19 +5,19 @@ catalog:
   '@ffmpeg/types': ^0.12.4
   '@ffmpeg/util': ^0.12.2
   '@huggingface/transformers': ^3.4.0
-  '@shikijs/core': ^3.1.0
-  '@shikijs/engine-javascript': ^3.1.0
-  '@shikijs/langs': ^3.1.0
-  '@shikijs/themes': ^3.1.0
+  '@shikijs/core': ^3.2.1
+  '@shikijs/engine-javascript': ^3.2.1
+  '@shikijs/langs': ^3.2.1
+  '@shikijs/themes': ^3.2.1
   '@tiptap/starter-kit': ^2.11.5
   '@tiptap/vue-3': ^2.11.5
-  '@unocss/reset': ^66.1.0-beta.3
+  '@unocss/reset': ^66.1.0-beta.5
   '@webcontainer/api': 1.5.1-internal.9
   dayjs: ^1.11.13
   file-saver: ^2.0.5
   floating-vue: ^5.2.2
   jszip: ^3.10.1
-  lightningcss-wasm: ^1.29.2
+  lightningcss-wasm: ^1.29.3
   matter-attractors: ^0.1.6
   matter-js: ^0.20.0
   moveable: ^0.53.0
