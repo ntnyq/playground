@@ -41,7 +41,9 @@ export function useElementSelection(
   const stopPosition = ref<Nullable<Position>>(null)
 
   function getTargets() {
-    if (!elRef.value || !options.target) return []
+    if (!elRef.value || !options.target) {
+      return []
+    }
     return elRef.value.querySelectorAll<HTMLElement>(options.target)
   }
   function ensureOverlay() {
@@ -119,13 +121,17 @@ export function useElementSelection(
     stopPosition.value = null
   })
   addEventListener('mousemove', (evt: MouseEvent) => {
-    if (!isSelecting.value) return
+    if (!isSelecting.value) {
+      return
+    }
 
     stopPosition.value = { x: evt.clientX, y: evt.clientY }
     updateRect()
   })
   addEventListener('mouseup', (evt: MouseEvent) => {
-    if (!isSelecting.value) return
+    if (!isSelecting.value) {
+      return
+    }
 
     stopPosition.value = { x: evt.clientX, y: evt.clientY }
     updateRect()

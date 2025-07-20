@@ -7,10 +7,7 @@ import githubDark from '@shikijs/themes/github-dark'
 import githubLight from '@shikijs/themes/github-light'
 import { createPlainShiki } from 'plain-shiki'
 import type { HighlighterCore } from '@shikijs/core'
-import type {
-  CreatePlainShikiReturns,
-  MountPlainShikiOptions,
-} from 'plain-shiki'
+import type { MountPlainShikiOptions, PlainShiki } from 'plain-shiki'
 
 export type UsePlainShikiOptions = Omit<MountPlainShikiOptions, 'lang'> & {
   lang: 'javascript' | 'typescript' | 'css'
@@ -27,7 +24,7 @@ export function usePlainShiki(
   const { lang, enabled = true, immediate = true } = options
   const target = toRef(el)
 
-  let plain: CreatePlainShikiReturns
+  let plain: PlainShiki
   let ctx: ReturnType<(typeof plain)['mount']> | undefined
 
   const { trigger } = watchTriggerable(target, () => {

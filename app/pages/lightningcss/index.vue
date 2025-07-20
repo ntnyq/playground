@@ -5,21 +5,9 @@ import { transformViaLightningCSS } from '~/utils/libs/lightningcss'
 const raw = ref(cssSample)
 const minified = ref('')
 
-async function minify() {
-  const result = await transformViaLightningCSS(raw.value)
-
-  minified.value = result
-}
-
-watch(
-  raw,
-  () => {
-    minify()
-  },
-  {
-    immediate: true,
-  },
-)
+watchEffect(async () => {
+  minified.value = await transformViaLightningCSS(raw.value)
+})
 </script>
 
 <template>

@@ -74,19 +74,25 @@ export function useWebContainer(
 
     // Wait for `server-ready` event
     webContainerInstance?.on('server-ready', (port, url) => {
-      if (!iframeRef || !iframeRef.value) return
+      if (!iframeRef || !iframeRef.value) {
+        return
+      }
       iframeRef.value.src = url
     })
   }
 
   async function ensureInstance() {
-    if (webContainerInstance) return
+    if (webContainerInstance) {
+      return
+    }
     // Call only once
     webContainerInstance = await WebContainer.boot()
   }
 
   async function writeFile(filePath: string, fileContent: string) {
-    if (!webContainerInstance) return
+    if (!webContainerInstance) {
+      return
+    }
     logger.info('writeFile: ', filePath, fileContent)
     await webContainerInstance.fs.writeFile(filePath, fileContent)
   }

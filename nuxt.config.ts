@@ -6,7 +6,7 @@
 import process from 'node:process'
 import topLevelAwait from 'vite-plugin-top-level-await'
 import wasm from 'vite-plugin-wasm'
-import { META } from './constants'
+import { META } from './app/constants'
 
 const sharedHeaders = {
   'Cross-Origin-Embedder-Policy': 'require-corp',
@@ -14,9 +14,9 @@ const sharedHeaders = {
 }
 
 export default defineNuxtConfig({
-  compatibilityDate: '2025-02-08',
+  compatibilityDate: '2025-07-18',
 
-  devtools: { enabled: true },
+  devtools: { enabled: false },
 
   ssr: false,
 

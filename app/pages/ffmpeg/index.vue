@@ -13,7 +13,9 @@ const videoSrc = ref('')
 const message = ref('Click to Start to Transcode')
 
 async function loadFFmpeg() {
-  if (ffmpeg.loaded) return
+  if (ffmpeg.loaded) {
+    return
+  }
 
   ffmpeg.on('log', evt => {
     message.value = evt.message

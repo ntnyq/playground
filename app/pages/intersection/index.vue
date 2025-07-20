@@ -4,11 +4,15 @@ const containterRef = useTemplateRef('containerRef')
 useElementSelection(containterRef, {
   target: '.select-target',
   onSelect(el) {
-    if (!el) return
+    if (!el) {
+      return
+    }
     el.classList.add('is-active')
   },
   onClear() {
-    if (!containterRef.value) return
+    if (!containterRef.value) {
+      return
+    }
     containterRef.value.querySelectorAll('.is-active').forEach(el => {
       el.classList.remove('is-active')
     })
