@@ -50,7 +50,7 @@
     "zrender": "^5.6.1"
   },
   "devDependencies": {
-    "@iconify-json/carbon": "^1.2.10",
+    "@iconify-json/carbon": "^1.2.11",
     "@iconify-json/logos": "^1.2.4",
     "@iconify-json/ri": "^1.2.5",
     "@iconify-json/uil": "^1.2.3",
