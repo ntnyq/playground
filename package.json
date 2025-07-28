@@ -47,7 +47,7 @@
     "simplex-noise": "^4.0.3",
     "ts-blank-space": "^0.6.1",
     "ufo": "^1.6.1",
-    "zrender": "^5.6.1"
+    "zrender": "^6.0.0"
   },
   "devDependencies": {
     "@iconify-json/carbon": "^1.2.11",
