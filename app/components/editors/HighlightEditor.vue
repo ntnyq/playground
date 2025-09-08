@@ -75,7 +75,7 @@ watch(
     ref="containerRef"
     class="relative flex flex-col gap-1"
   >
-    <slot :focused="focused" />
+    <slot :focused />
     <div
       @input="updateModelValue"
       v-if="isSupported"

@@ -13,7 +13,7 @@ const editor = useEditor({
   <div class="relative h-screen flex-center">
     <div class="w-full lg:w-1200px md:w-800px">
       <ClientOnly>
-        <EditorContent :editor="editor" />
+        <EditorContent :editor />
       </ClientOnly>
     </div>
   </div>
