@@ -101,11 +101,11 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="relative h-screen flex-center">
-    <div class="relative h-300px w-300px">
+  <div class="flex-center h-screen relative">
+    <div class="h-300px w-300px relative">
       <div
         ref="elRef"
-        class="pointer-events-none absolute inset-0 -z-1"
+        class="pointer-events-none inset-0 absolute -z-1"
       />
     </div>
   </div>

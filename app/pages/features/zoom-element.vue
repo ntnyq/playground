@@ -7,17 +7,17 @@ const { scale, zoomIn, zoomOut } = useZoomElement(targetElRef)
   <CenterContainer>
     <div
       ref="targetElRef"
-      class="h-600px w-600px flex-center border border-orange"
+      class="border border-orange flex-center h-600px w-600px"
     >
       <div
         ref="targetElRef"
         :style="{
           transform: `scale(${scale})`,
         }"
-        class="h-200px w-200px bg-red"
+        class="bg-red h-200px w-200px"
       />
 
-      <div class="absolute bottom-2 right-2">
+      <div class="bottom-2 right-2 absolute">
         <IconButton
           @click="zoomIn()"
           icon="i-ri:add-circle-line"

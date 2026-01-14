@@ -56,17 +56,17 @@ watch(
 </script>
 
 <template>
-  <div class="relative h-screen">
-    <div class="relative mx-auto h-full gap-2 lg:(flex gap-4 px-20)">
-      <div class="relative flex flex-col lg:w-1/2">
+  <div class="h-screen relative">
+    <div class="mx-auto gap-2 h-full relative lg:(px-20 flex gap-4)">
+      <div class="flex flex-col relative lg:w-1/2">
         <h2
-          class="flex-center flex-none py-4 text-center text-2xl font-semibold"
+          class="text-2xl font-semibold py-4 text-center flex-center flex-none"
         >
           <div class="i-vscode-icons:file-type-typescript-official mr-2" />
           <span>TypeScript</span>
         </h2>
         <div
-          class="relative flex-1 of-y-auto border border-zinc-300 dark:border-zinc-600"
+          class="border border-zinc-300 flex-1 relative of-y-auto dark:border-zinc-600"
         >
           <HighlightEditor
             v-model="typescriptCode"
@@ -75,15 +75,15 @@ watch(
           />
         </div>
       </div>
-      <div class="relative flex flex-col lg:w-1/2">
+      <div class="flex flex-col relative lg:w-1/2">
         <h2
-          class="flex-center flex-none py-4 text-center text-2xl font-semibold"
+          class="text-2xl font-semibold py-4 text-center flex-center flex-none"
         >
           <div class="i-vscode-icons:file-type-js-official mr-2" />
           <span>JavaScript</span>
         </h2>
         <div
-          class="relative flex-1 of-y-auto border border-zinc-300 dark:border-zinc-600"
+          class="border border-zinc-300 flex-1 relative of-y-auto dark:border-zinc-600"
         >
           <HighlightEditor
             :model-value="javascriptCode"
@@ -96,7 +96,7 @@ watch(
     </div>
 
     <div
-      class="fixed left-1/2 top-4 z-1000 flex items-center gap-4 -translate-x-1/2"
+      class="flex gap-4 items-center left-1/2 top-4 fixed z-1000 -translate-x-1/2"
     >
       <label
         class="font-medium op-65"
@@ -107,7 +107,7 @@ watch(
       <select
         v-model="transformer"
         id="transformer"
-        class="border border-zinc-200 px-2 py-1"
+        class="px-2 py-1 border border-zinc-200"
       >
         <option value="ts-blank-space">ts-blank-space</option>
         <option value="oxidase">oxidase</option>

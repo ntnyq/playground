@@ -54,9 +54,9 @@ async function transcode() {
 </script>
 
 <template>
-  <div class="relative h-full flex-center">
+  <div class="flex-center h-full relative">
     <div class="">
-      <div class="mx-auto block h-300px w-500px">
+      <div class="mx-auto h-300px w-500px block">
         <video
           :src="videoSrc"
           class="h-full w-full object-cover"
@@ -66,13 +66,13 @@ async function transcode() {
 
       <button
         @click="transcode"
-        class="mx-auto my-4 block rounded bg-blue-500 p-2 text-white hover:bg-blue-600"
+        class="text-white mx-auto my-4 p-2 rounded bg-blue-500 block hover:bg-blue-600"
         type="button"
       >
         Transcode
       </button>
 
-      <p class="block p-4 text-lg">{{ message }}</p>
+      <p class="text-lg p-4 block">{{ message }}</p>
     </div>
   </div>
 </template>

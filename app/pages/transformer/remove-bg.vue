@@ -167,7 +167,7 @@ async function handleClick() {
 </script>
 
 <template>
-  <div class="relative h-screen flex-center flex-col gap-4">
+  <div class="flex-center flex-col gap-4 h-screen relative">
     <div
       v-if="imageDataURL"
       ref="imageContainerRef"
@@ -183,11 +183,11 @@ async function handleClick() {
         'bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-900 dark:hover:bg-zinc-700':
           !isOverDropZone,
       }"
-      class="h-[180px] w-[400px] cursor-pointer rounded-md transition-colors duration-200 ease-in-out"
+      class="rounded-md h-[180px] w-[400px] cursor-pointer transition-colors duration-200 ease-in-out"
       role="button"
     >
       <div
-        class="h-full flex flex-col items-center justify-center gap-4 text-zinc-600 dark:text-zinc-200"
+        class="text-zinc-600 flex flex-col gap-4 h-full items-center justify-center dark:text-zinc-200"
       >
         <div class="i-carbon:upload h-12 w-12" />
         <p class="text-lg">Select or drop an image file here</p>

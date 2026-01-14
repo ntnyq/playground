@@ -18,12 +18,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative h-screen flex-center">
+  <div class="flex-center h-screen relative">
     <div class="relative">
-      <p class="mb-4 text-lg">
+      <p class="text-lg mb-4">
         <span class="text-1.2em text-green">{{ count }}</span> files created.
       </p>
-      <div class="flex items-center gap-6">
+      <div class="flex gap-6 items-center">
         <SimpleButton
           @click="handleAddFile"
           title="Add File"

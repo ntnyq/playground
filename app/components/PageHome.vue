@@ -6,8 +6,8 @@ defineProps<{
 </script>
 
 <template>
-  <div class="relative min-h-screen of-y-auto">
-    <div class="container mx-auto px-4">
+  <div class="min-h-screen relative of-y-auto">
+    <div class="mx-auto px-4 container">
       <div class="py-8">
         <h1 class="text-3xl font-bold">{{ title }}</h1>
         <p

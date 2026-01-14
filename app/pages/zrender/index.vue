@@ -173,7 +173,7 @@ tryOnMounted(render)
 </script>
 
 <template>
-  <div class="h-screen flex-center">
+  <div class="flex-center h-screen">
     <div
       ref="containerRef"
       class="h-80vmin w-80vmin"

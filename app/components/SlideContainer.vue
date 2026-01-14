@@ -32,34 +32,34 @@ onMounted(() => {
 
 <template>
   <CenterContainer>
-    <div class="relative flex flex-col gap-4">
+    <div class="flex flex-col gap-4 relative">
       <div
         ref="containerRef"
-        class="of-hidden border border-dashed"
+        class="border border-dashed of-hidden"
       >
         <div class="relative z-4">
           <div
             ref="indicatorRef"
-            class="from transparent absolute left-$clip-percentage z-10 w-0.5 rounded-full via-white to-transparent bg-gradient-to-b -inset-y-4"
+            class="from transparent rounded-full w-0.5 left-$clip-percentage absolute z-10 to-transparent via-white bg-gradient-to-b -inset-y-4"
           >
             <div
-              class="absolute inset-y-4 w-12 rounded-full from-transparent via-primary:75 to-transparent bg-gradient-to-r blur-md -left-6"
+              class="rounded-full w-12 inset-y-4 absolute from-transparent to-transparent via-primary:75 bg-gradient-to-r blur-md -left-6"
             />
-            <div class="absolute inset-y-4 z-10 -inset-x-14">
-              <div class="absolute inset-0 wh-full bg-black" />
+            <div class="inset-y-4 absolute z-10 -inset-x-14">
+              <div class="bg-black wh-full inset-0 absolute" />
             </div>
           </div>
         </div>
 
         <div
           ref="cardLeftRef"
-          class="[clip-path:inset(0px_var(--clip-percentage)_0px_0px)] ml-auto h-full flex flex-col justify-between border-gray-200"
+          class="ml-auto border-gray-200 flex flex-col h-full [clip-path:inset(0px_var(--clip-percentage)_0px_0px)] justify-between"
         >
           <slot name="left" />
         </div>
         <div
           ref="cardRightRef"
-          class="[clip-path:inset(0px_0px_0px_var(--clip-percentage))] absolute inset-0 ml-auto h-full flex flex-col justify-between border-gray-800 shadow-lg"
+          class="ml-auto border-gray-800 flex flex-col h-full shadow-lg [clip-path:inset(0px_0px_0px_var(--clip-percentage))] inset-0 justify-between absolute"
         >
           <slot name="right" />
         </div>

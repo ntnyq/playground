@@ -23,13 +23,13 @@ useElementSelection(containterRef, {
 <template>
   <div
     ref="containerRef"
-    class="h-screen flex-center select-none"
+    class="flex-center h-screen select-none"
   >
-    <ul class="max-w-600px flex-center flex-wrap gap-15px">
+    <ul class="flex-center flex-wrap gap-15px max-w-600px">
       <li
         v-for="n in 10"
         :key="n"
-        class="select-target h-100px w-100px flex-center border-2 border-teal"
+        class="select-target border-2 border-teal flex-center h-100px w-100px"
       >
         <strong class="text-2xl">{{ n }}</strong>
       </li>

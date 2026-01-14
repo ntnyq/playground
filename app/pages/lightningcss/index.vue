@@ -11,17 +11,17 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <div class="relative h-screen">
-    <div class="relative mx-auto h-full gap-2 lg:(flex gap-4 px-20)">
-      <div class="relative flex flex-col lg:w-1/2">
+  <div class="h-screen relative">
+    <div class="mx-auto gap-2 h-full relative lg:(px-20 flex gap-4)">
+      <div class="flex flex-col relative lg:w-1/2">
         <h2
-          class="flex-center flex-none py-4 text-center text-2xl font-semibold"
+          class="text-2xl font-semibold py-4 text-center flex-center flex-none"
         >
           <div class="i-vscode-icons:file-type-css mr-2" />
           <span>Raw</span>
         </h2>
         <div
-          class="relative flex-1 of-y-auto border border-zinc-300 dark:border-zinc-600"
+          class="border border-zinc-300 flex-1 relative of-y-auto dark:border-zinc-600"
         >
           <HighlightEditor
             v-model="raw"
@@ -31,15 +31,15 @@ watchEffect(async () => {
           />
         </div>
       </div>
-      <div class="relative flex flex-col lg:w-1/2">
+      <div class="flex flex-col relative lg:w-1/2">
         <h2
-          class="flex-center flex-none py-4 text-center text-2xl font-semibold"
+          class="text-2xl font-semibold py-4 text-center flex-center flex-none"
         >
           <div class="i-vscode-icons:file-type-css mr-2" />
           <span>Minified</span>
         </h2>
         <div
-          class="relative flex-1 of-y-auto border border-zinc-300 dark:border-zinc-600"
+          class="border border-zinc-300 flex-1 relative of-y-auto dark:border-zinc-600"
         >
           <HighlightEditor
             :model-value="minified"

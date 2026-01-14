@@ -17,7 +17,7 @@ const isChecked = defineModel<boolean>('modelValue')
     <span>{{ title }}</span>
     <span
       v-if="isChecked"
-      class="absolute h-2 w-2 border border-primary rounded-full bg-primary:50 -right-0.75 -top-0.75"
+      class="border border-primary rounded-full bg-primary:50 h-2 w-2 absolute -right-0.75 -top-0.75"
     />
   </SimpleButton>
 </template>

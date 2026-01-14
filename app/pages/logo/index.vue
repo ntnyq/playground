@@ -3,7 +3,7 @@ const [showSVG, toggleShowSVG] = useToggle(true)
 </script>
 
 <template>
-  <div class="relative h-screen flex-center flex-col gap-4">
+  <div class="flex-center flex-col gap-4 h-screen relative">
     <Transition
       enter-active-class="animate-bounce-in"
       leave-active-class="animate-bounce-out"
@@ -41,9 +41,9 @@ const [showSVG, toggleShowSVG] = useToggle(true)
       </div>
       <div
         v-else
-        class="h-800px w-800px flex-center bg-black"
+        class="bg-black flex-center h-800px w-800px"
       >
-        <div class="flex-center text-160px text-green font-semibold">
+        <div class="text-160px text-green font-semibold flex-center">
           <span>&lt;</span>
           <p>ntnyq</p>
           <span>&gt;</span>

@@ -3,7 +3,7 @@ defineProps<{}>()
 </script>
 
 <template>
-  <div class="relative h-screen flex-center">
+  <div class="flex-center h-screen relative">
     <div class="relative">
       <slot />
     </div>

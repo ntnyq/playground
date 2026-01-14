@@ -14,7 +14,7 @@ const sharedHeaders = {
 }
 
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-18',
+  compatibilityDate: '2026-04-18',
 
   devtools: { enabled: false },
 
@@ -66,7 +66,7 @@ export default defineNuxtConfig({
 
   experimental: {
     appManifest: false,
-    payloadExtraction: false,
+    payloadExtraction: 'client',
     renderJsonPayloads: true,
     scanPageMeta: true,
     typedPages: true,
@@ -126,12 +126,17 @@ export default defineNuxtConfig({
   },
 
   vite: {
+    build: {
+      target: 'esnext',
+    },
+
     esbuild: {
       legalComments: 'external',
     },
 
     optimizeDeps: {
       exclude: ['@ffmpeg/ffmpeg', '@ffmpeg/util'],
+      include: ['floating-vue'],
     },
 
     plugins: [
@@ -141,6 +146,7 @@ export default defineNuxtConfig({
     ],
 
     resolve: {
+      dedupe: ['nitropack'],
       alias: {
         path: 'pathe',
         util: 'util',

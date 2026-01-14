@@ -1,5 +1,5 @@
 overrides:
-  esbuild: ^0.25.8
+  esbuild: ^0.28.0
 onlyBuiltDependencies:
   - '@parcel/watcher'
   - '@swc/core'

@@ -10,10 +10,10 @@ const editor = useEditor({
 </script>
 
 <template>
-  <div class="relative h-screen flex-center">
+  <div class="flex-center h-screen relative">
     <div class="w-full lg:w-1200px md:w-800px">
       <ClientOnly>
-        <EditorContent :editor="editor" />
+        <EditorContent :editor />
       </ClientOnly>
     </div>
   </div>

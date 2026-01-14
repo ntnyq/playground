@@ -9,7 +9,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative h-screen flex-center">
+  <div class="flex-center h-screen relative">
     <iframe
       ref="iframeRef"
       class="h-full w-full"

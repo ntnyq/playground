@@ -24,8 +24,9 @@ defineProps<{}>()
         <a
           class="hover:text-primary"
           href="https://rss.beauty/"
-          >RSS.Beauty</a
         >
+          RSS.Beauty
+        </a>
       </p>
     </template>
   </SlideContainer>
