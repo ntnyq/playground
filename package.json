@@ -22,7 +22,7 @@
     "@ffmpeg/ffmpeg": "^0.12.15",
     "@ffmpeg/types": "^0.12.4",
     "@ffmpeg/util": "^0.12.2",
-    "@huggingface/transformers": "^3.7.2",
+    "@huggingface/transformers": "^4.0.1",
     "@ntnyq/utils": "^0.9.1",
     "@shikijs/core": "^4.0.0",
     "@shikijs/engine-javascript": "^4.0.0",
