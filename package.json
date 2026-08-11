@@ -64,7 +64,7 @@
     "@types/p5": "^1.7.7",
     "@unocss/nuxt": "^66.6.8",
     "@vueuse/nuxt": "^14.2.1",
-    "bumpp": "^11.0.1",
+    "bumpp": "^12.1.1",
     "consola": "^3.4.2",
     "eslint": "^10.2.0",
     "husky": "^9.1.7",
