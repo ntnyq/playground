@@ -78,7 +78,6 @@
     "tsx": "^4.23.13",
     "typescript": "^6.0.3",
     "vite": "^8.2.2",
-    "vite-plugin-top-level-await": "^1.6.0",
     "vite-plugin-wasm": "^3.6.0",
     "vue-tsc": "^3.3.11"
   },
