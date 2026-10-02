@@ -44,7 +44,6 @@ export function usePlainShiki(
       engine: createJavaScriptRegexEngine(),
     })
 
-    // @ts-expect-error - plain-shiki is outdated
     plain = createPlainShiki(await shikiPromise)
 
     if (immediate) {

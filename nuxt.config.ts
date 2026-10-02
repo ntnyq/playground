@@ -4,7 +4,6 @@
  */
 
 import process from 'node:process'
-import topLevelAwait from 'vite-plugin-top-level-await'
 import wasm from 'vite-plugin-wasm'
 import { META } from './app/constants'
 
@@ -142,7 +141,6 @@ export default defineNuxtConfig({
     plugins: [
       // https://github.com/Menci/vite-plugin-wasm
       wasm(),
-      topLevelAwait(),
     ],
 
     resolve: {
